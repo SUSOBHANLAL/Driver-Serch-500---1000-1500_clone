@@ -1,0 +1,57 @@
+http://localhost:5000/
+
+
+POST /api/drivers/add
+Content-Type: application/json
+{
+  "driverId": "driver123",
+  "location": { "type": "Point", "coordinates": [78.4867, 17.3850] },
+  "status": "online"
+}
++
+
+
+
+This is  to  add the  satation info  
+URL  == > http://localhost:5000/api/stations
+{
+  "stationId": "mgs",
+  "stationName": "Mgbs",
+ "location": {
+    "type": "Point",
+    "coordinates": [78.48572931611685, 17.378502778550786]
+  }
+}
+
+
+
+
+Test the API using tools like Postman:
+
+Endpoint: POST http://localhost:5000/api/fifostations/nearest
+{
+  "latitude": 17.435768370541712,
+  "longitude": 78.44449563589029
+
+}
+
+output :
+{
+    "nearestStation": {
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                78.44446923543585,
+                17.435868666221655
+            ]
+        },
+        "_id": "676aaabc0864d3a5bd504410",
+        "driverId": "driver-tgmew",
+        "stationName": "AMEERPET",
+        "status": "idle",
+        "createdAt": "2024-12-24T12:36:12.311Z",
+        "updatedAt": "2024-12-24T12:36:12.311Z",
+        "__v": 0
+    },
+    "distance": 0.011498668625391931
+}
